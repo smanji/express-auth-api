@@ -1,20 +1,33 @@
+Fetch this code
+- git clone https://github.com/smanji/express-auth-api.git
+
 Install required packages
-- npm install express
-- npm install path
-- npm install body-parser
-- npm install express-session
-- npm install cors
-- npm install mongoose
-- npm install errorhandler
-- npm install morgan
-- npm install passport
-- npm install passport-local
-- npm install express-jwt
-- npm install jsonwebtoken
-- npm install -g nodemon
+- sudo npm install
+- sudo npm install -g nodemon
 
 Make sure mongo is running
 - mongod
 
 Run server
 - nodemon app.js
+
+Use Postman to:
+- Register a new user: POST http://localhost:8000/api/users
+```
+{
+	"user": {
+		"email": "test@test.com",
+		"password": "test"
+	}
+}
+```
+
+- Login that user: POST http://localhost:8000/api/users/login
+```
+{
+	"user": {
+		"email": "test@test.com",
+		"password": "test"
+	}
+}
+```
